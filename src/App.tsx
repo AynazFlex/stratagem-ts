@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Chapter1 from "./components/Chapter1";
 import Chapter2 from "./components/Chapter2";
+import Chapter3 from "./components/Chapter3";
 
 interface Chapter {
   id: number;
@@ -11,7 +12,7 @@ interface Chapter {
 const chapters: Chapter[] = [
   { id: 1, title: "1. Планирование", available: true },
   { id: 2, title: "2. Ведение войны", available: true },
-  { id: 3, title: "3. Стратегическое нападение", available: false },
+  { id: 3, title: "3. Стратегическое нападение", available: true },
   { id: 4, title: "4. Форма (Тактика)", available: false },
   { id: 5, title: "5. Мощь (Энергия)", available: false },
   { id: 6, title: "6. Полнота и пустота", available: false },
@@ -82,7 +83,7 @@ export default function App() {
         `}
       >
         {/* ... (внутренности сайдбара остаются прежними) ... */}
-        <div>
+        <div className="scroll-auto h-full overflow-y-auto">
           <div className="mb-6 p-2 border-b border-indigo-500/20">
             <h1 className="text-lg font-black tracking-widest text-transparent bg-clip-text bg-linear-to-r from-indigo-400 to-cyan-400">
               ИСКУССТВО ВОЙНЫ
@@ -97,7 +98,7 @@ export default function App() {
                   setActiveChapter(ch.id);
                   setIsMenuOpen(false);
                 }}
-                className={`w-full text-left px-3 py-2.5 rounded text-xs ${
+                className={`w-full text-left px-3 py-2.5 rounded text-xs cursor-pointer ${
                   activeChapter === ch.id
                     ? "bg-indigo-950/40 text-indigo-400"
                     : "text-slate-400"
@@ -117,9 +118,10 @@ export default function App() {
       <main className="flex-1 h-full bg-[#05070f] relative w-full">
         {activeChapter === 1 && <Chapter1 />}
         {activeChapter === 2 && <Chapter2 />}
-        {activeChapter > 2 && (
+        {activeChapter === 3 && <Chapter3 />}
+        {activeChapter > 3 && (
           <div className="flex items-center justify-center h-full text-slate-600 text-xs tracking-widest uppercase">
-            Раздел заблокирована. Ожидание разбора главы.
+            Раздел заблокирован. Ожидание разбора главы.
           </div>
         )}
       </main>
