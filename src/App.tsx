@@ -2,6 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import Chapter1 from "./components/Chapter1";
 import Chapter2 from "./components/Chapter2";
 import Chapter3 from "./components/Chapter3";
+import Chapter4 from "./components/Chapter4";
+import Chapter5 from "./components/Chapter5";
+import Chapter6 from "./components/Chapter6";
+import Chapter7 from "./components/Chapter7";
+import Chapter8 from "./components/Chapter8";
+import Chapter9 from "./components/Chapter9";
+import Chapter10 from "./components/Chapter10";
 
 interface Chapter {
   id: number;
@@ -13,13 +20,13 @@ const chapters: Chapter[] = [
   { id: 1, title: "1. Планирование", available: true },
   { id: 2, title: "2. Ведение войны", available: true },
   { id: 3, title: "3. Стратегическое нападение", available: true },
-  { id: 4, title: "4. Форма (Тактика)", available: false },
-  { id: 5, title: "5. Мощь (Энергия)", available: false },
-  { id: 6, title: "6. Полнота и пустота", available: false },
-  { id: 7, title: "7. Борьба на войне", available: false },
-  { id: 8, title: "8. Девять изменений", available: false },
-  { id: 9, title: "9. Поход", available: false },
-  { id: 10, title: "10. Формы местности", available: false },
+  { id: 4, title: "4. Развертывание", available: true },
+  { id: 5, title: "5. Движущая сила", available: true },
+  { id: 6, title: "6. Полнота и пустота", available: true },
+  { id: 7, title: "7. Маневрирование", available: true },
+  { id: 8, title: "8. Девять переменных", available: true },
+  { id: 9, title: "9. Поход", available: true },
+  { id: 10, title: "10. Формы местности", available: true },
   { id: 11, title: "11. Девять местностей", available: false },
   { id: 12, title: "12. Огневое нападение", available: false },
   { id: 13, title: "13. Использование шпионов", available: false },
@@ -119,7 +126,14 @@ export default function App() {
         {activeChapter === 1 && <Chapter1 />}
         {activeChapter === 2 && <Chapter2 />}
         {activeChapter === 3 && <Chapter3 />}
-        {activeChapter > 3 && (
+        {activeChapter === 4 && <Chapter4 />}
+        {activeChapter === 5 && <Chapter5 />}
+        {activeChapter === 6 && <Chapter6 />}
+        {activeChapter === 7 && <Chapter7 />}
+        {activeChapter === 8 && <Chapter8 />}
+        {activeChapter === 9 && <Chapter9 />}
+        {activeChapter === 10 && <Chapter10 />}
+        {activeChapter > 10 && (
           <div className="flex items-center justify-center h-full text-slate-600 text-xs tracking-widest uppercase">
             Раздел заблокирован. Ожидание разбора главы.
           </div>
