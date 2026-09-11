@@ -1,13 +1,38 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sun-tzu-flow</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="ru"> <!-- Изменили язык на ru для корректного SEO и озвучки экранов -->
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Основные мета-теги -->
+  <title>STRATAGEM.TS — Интерактивный дашборд Сунь-Цзы</title>
+  <meta name="description"
+    content="13-дневный интерактивный конспект трактата Сунь-Цзы «Искусство войны». Визуализация стратегии в виде графов и причинно-следственных схем на React, TypeScript и Tailwind." />
+  <meta name="keywords"
+    content="Сунь-Цзы, Искусство войны, стратагемы, React Flow, TypeScript, Tailwind, интерактивный конспект, дашборд" />
+  <meta name="author" content="AynazFlex" />
+
+  <!-- Open Graph (Красивые карточки-превью для Telegram, Discord, VK и др.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="STRATAGEM.TS — Интерактивный тактический конспект" />
+  <meta property="og:description"
+    content="Пройди 13-дневный разбор книги «Искусство войны» Сунь-Цзы на интерактивных схемах со стрелками." />
+  <meta property="og:url" content="https://vercel.app" />
+  <meta property="og:site_name" content="STRATAGEM.TS" />
+  <!-- Если захотите добавить картинку для превью ссылки, положите её в папку public и раскомментируйте строку ниже: -->
+  <!-- <meta property="og:image" content="https://vercel.app/og-preview.png" /> -->
+
+  <!-- Twitter-карточки (для X / Twitter) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="STRATAGEM.TS — Дашборд Сунь-Цзы" />
+  <meta name="twitter:description" content="Интерактивная карта смыслов и тактических вариаций «Искусства войны»." />
+</head>
+
+<body class="bg-[#030712]"> <!-- Добавили базовый цвет фона, чтобы экран не мигал белым при загрузке -->
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
