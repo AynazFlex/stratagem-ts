@@ -1,32 +1,64 @@
-# React + TypeScript + Vite
+# 🧠 STRATAGEM.TS — Интерактивный тактический конспект
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**STRATAGEM.TS** — это веб-приложение на React, представляющее собой интерактивную карту смыслов и причинно-следственных связей по трактату **Сунь-Цзы «Искусство войны»**. 
 
-Currently, two official plugins are available:
+Проект выполнен в виде высокотехнологичного тактического дашборда (Cyber Center), где каждая из 13 глав визуализирована в виде графа со стрелками, отражающего чистую логику древней стратегии: от предварительных расчетов до управления шпионскими сетями.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🎨 Особенности проекта и Дизайн-система
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **13-дневный трекинг:** Адаптивное боковое меню (Sidebar) для последовательного переключения и разблокировки глав.
+*   **Визуализация на графах:** Использование `@xyflow/react` для создания интерактивных холстов с поддержкой перемещения узлов (drag), зума и панорамирования (pan).
+*   **Cyberpunk UI:** Глубокий темный интерфейс с неоновыми связями-импульсами, разработанный с помощью Tailwind CSS.
+*   **Полный мобильный адаптив:** Сайдбар эргономично прячется на смартфонах в левый верхний угол, а холст превращается в интерактивную карту, управляемую жестами.
+*   **Строгая типизация:** Весь проект, включая конфигурации узлов (`Node[]`) и связей (`Edge[]`), написан на TypeScript.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 🛠 Технологический стек
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+*   **Развертывание:** Vite
+*   **Фреймворк:** React 19 / 18 + TypeScript
+*   **Схемы и Графы:** @xyflow/react (React Flow)
+*   **Стилизация:** Tailwind CSS v4
+
+---
+
+## 🚀 Быстрый старт (Локальный запуск)
+
+Для того чтобы запустить проект у себя на компьютере, выполните следующие шаги:
+
+### 1. Клонирование репозитория
+```bash
+git clone https://github.com
+cd stratagem-ts
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### 2. Установка зависимостей
+```bash
+npm install
+```
+
+### 3. Запуск сервера разработки
+```bash
+npm run dev
+```
+После запуска откройте в браузере адрес, указанный в терминале (обычно `http://localhost:5173`).
+
+---
+
+## 📐 Архитектура логических схем по главам
+
+Каждая глава приложения имеет свою уникальную цветовую палитру и структуру:
+*   **Глава 1. Предварительные расчеты:** Индиго-терминал. Показывает 5 факторов и 7 расчетов, сходящихся к закону обмана.
+*   **Глава 2. Ведение войны:** Промышленный дашборд. Красные импульсы истощения затяжной войны и зеленые блоки снабжения за счет врага.
+*   **Глава 3. Стратегическое нападение:** Золотая иерархия приоритетов (победа без боя) и математика соотношения сил.
+*   **Глава 4. Форма / Развертывание:** Баланс Щита (Оборона непобедимости) и Меча (Наступление по ошибке врага).
+*   ...
+*   **Глава 13. Использование шпионов:** Изумрудная шпионская сеть, выстроенная в виде каскадной лестницы (от местных до шпионов смерти и жизни).
+
+---
+
+## 📜 Главные инсайты проекта
+> *«Война — это путь обмана. Если ты силен — притворяйся слабым. Если знаешь врага и знаешь себя — сражайся хоть сто раз, опасности не будет. Тебе принадлежит только то, что ты можешь защитить».*

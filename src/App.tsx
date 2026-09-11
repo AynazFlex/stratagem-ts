@@ -11,6 +11,7 @@ import Chapter9 from "./components/Chapter9";
 import Chapter10 from "./components/Chapter10";
 import Chapter11 from "./components/Chapter11";
 import Chapter12 from "./components/Chapter12";
+import Chapter13 from "./components/Chapter13";
 
 interface Chapter {
   id: number;
@@ -31,7 +32,7 @@ const chapters: Chapter[] = [
   { id: 10, title: "10. Формы местности", available: true },
   { id: 11, title: "11. Девять местностей", available: true },
   { id: 12, title: "12. Огневое нападение", available: true },
-  { id: 13, title: "13. Использование шпионов", available: false },
+  { id: 13, title: "13. Использование шпионов", available: true },
 ];
 
 export default function App() {
@@ -137,7 +138,8 @@ export default function App() {
         {activeChapter === 10 && <Chapter10 />}
         {activeChapter === 11 && <Chapter11 />}
         {activeChapter === 12 && <Chapter12 />}
-        {activeChapter > 12 && (
+        {activeChapter === 13 && <Chapter13 />}
+        {activeChapter > 13 && (
           <div className="flex items-center justify-center h-full text-slate-600 text-xs tracking-widest uppercase">
             Раздел заблокирован. Ожидание разбора главы.
           </div>
