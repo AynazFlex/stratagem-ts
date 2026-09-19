@@ -73,7 +73,7 @@ export default function App() {
   }, [isMenuOpen]);
 
   return (
-    <div className="flex h-screen w-screen bg-[#030712] text-slate-100 overflow-auto font-mono relative">
+    <div className="flex h-dvh w-screen bg-[#030712] text-slate-100 overflow-hidden font-mono relative">
       {/* КНОПКА МЕНЮ — Добавили ref */}
       <button
         ref={menuButtonRef}
